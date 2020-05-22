@@ -20,7 +20,7 @@
      xmlns:IAO_0000119="http://purl.obolibrary.org/obo/IAO_0000119#"
      xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
      xmlns:untitled-ontology-23="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/untitled-ontology-23#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/CCOnto/ontologies/2019/9/cc"/>
     
 
 
@@ -574,7 +574,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#hasFoodHabit">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodHabits"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodDiet"/>
     </owl:ObjectProperty>
     
 
@@ -838,8 +838,7 @@
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#BedTime -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#BedTime">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Chronotype"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#SleepQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Sleep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -848,7 +847,7 @@
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#SleepDuartion -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#SleepDuartion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#SleepQuality"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Sleep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -857,17 +856,9 @@
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Wakeup_time -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Wakeup_time">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Chronotype"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Sleep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>wakeup time</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#activityLevel -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#activityLevel">
-        <rdfs:domain rdf:resource="https://perkapp.fbk.eu/helis/ontology/core#Activity"/>
     </owl:DatatypeProperty>
     
 
@@ -1494,23 +1485,6 @@ group.</rdfs:comment>
     
 
 
-    <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Evaluation -->
-
-    <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Evaluation">
-        <protege:defaultLanguage xml:lang="en"></protege:defaultLanguage>
-        <IAO_0000119:formal_citation rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">
-						Thesaurus of Psychological Index Terms Edited by Ian
-						Galloway Published by American Psychological Association 2014
-					</IAO_0000119:formal_citation>
-        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">Conceptually broad term referring to the appraisal
-of the characteristics, significance, importance,
-or relative value of a person, organization, or
-thing.</rdfs:comment>
-        <rdfs:label>Evaluation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Extraversion -->
 
     <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Extraversion">
@@ -1574,20 +1548,6 @@ five broad factors: neuroticism, extraversion,
 openness to experience, agreeableness, and
 conscientiousness.</rdfs:comment>
         <rdfs:label>Five Factor Personality Model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Frustration -->
-
-    <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Frustration">
-        <protege:defaultLanguage xml:lang="en"></protege:defaultLanguage>
-        <IAO_0000119:formal_citation rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">
-						Thesaurus of Psychological Index Terms Edited by Ian
-						Galloway Published by American Psychological Association 2014
-					</IAO_0000119:formal_citation>
-        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal"></rdfs:comment>
-        <rdfs:label>Frustration</rdfs:label>
     </owl:Class>
     
 
@@ -1729,6 +1689,7 @@ principles.</rdfs:comment>
     <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Motivation -->
 
     <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Motivation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#CharacteristicAdaptation"/>
         <protege:defaultLanguage xml:lang="en"></protege:defaultLanguage>
         <IAO_0000118:alternative_name rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">Drive</IAO_0000118:alternative_name>
         <IAO_0000119:formal_citation rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">
@@ -1953,24 +1914,6 @@ various therapeutic treatments.</rdfs:comment>
     
 
 
-    <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Stress -->
-
-    <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Stress">
-        <protege:defaultLanguage xml:lang="en"></protege:defaultLanguage>
-        <IAO_0000119:formal_citation rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">
-						Thesaurus of Psychological Index Terms Edited by Ian
-						Galloway Published by American Psychological Association 2014
-					</IAO_0000119:formal_citation>
-        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">Refers to the emotional, psychological, or
-physical effects as well as the sources of
-agitation, strain, tension, or pressure. Compare
-DISTRESS. Used for both human and animal
-populations.</rdfs:comment>
-        <rdfs:label>Stress</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Stroop_Color_Word_Test -->
 
     <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Stroop_Color_Word_Test">
@@ -1982,24 +1925,6 @@ populations.</rdfs:comment>
 					</IAO_0000119:formal_citation>
         <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal"></rdfs:comment>
         <rdfs:label>Stroop Color Word Test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Stroop_Effect -->
-
-    <owl:Class rdf:about="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Stroop_Effect">
-        <protege:defaultLanguage xml:lang="en"></protege:defaultLanguage>
-        <IAO_0000119:formal_citation rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">
-						Thesaurus of Psychological Index Terms Edited by Ian
-						Galloway Published by American Psychological Association 2014
-					</IAO_0000119:formal_citation>
-        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal">Interference in information or perceptual
-processing due to presentation of stimuli that are
-contradictory in different dimensions as a measure
-of cognitive control, e.g., stimulus word &quot;red&quot;
-printed in the color green.</rdfs:comment>
-        <rdfs:label>Stroop Effect</rdfs:label>
     </owl:Class>
     
 
@@ -7216,9 +7141,9 @@ lacking originality or individuality</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodHabits -->
+    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodDiet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodHabits">
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodDiet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#frequent"/>
     </owl:Class>
     
@@ -7382,7 +7307,9 @@ lacking originality or individuality</rdfs:comment>
 
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
     
 
 
@@ -8112,7 +8039,7 @@ lacking originality or individuality</rdfs:comment>
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Omnivorism -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Omnivorism">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodHabits"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodDiet"/>
     </owl:Class>
     
 
@@ -9042,10 +8969,35 @@ lacking originality or individuality</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#hasFoodHabit"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Veganism"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#hasFoodHabit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Veganism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Veganism -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Veganism">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodHabits"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodDiet"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#consume"/>
@@ -9085,10 +9037,35 @@ lacking originality or individuality</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegeterian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegeterian">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#hasFoodHabit"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegeterianism"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Human"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#hasFoodHabit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegeterianism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegeterianism -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#Vegeterianism">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodHabits"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#FoodDiet"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -9163,7 +9140,9 @@ lacking originality or individuality</rdfs:comment>
 
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#WellBeing -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#WellBeing"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#WellBeing">
+        <rdfs:label xml:lang="en">Wellbeing</rdfs:label>
+    </owl:Class>
     
 
 
@@ -9385,6 +9364,15 @@ using words in a clever and funny way</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#emotionalWellbeing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#emotionalWellbeing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#WellBeing"/>
+        <rdfs:label xml:lang="en">EmotionalWellbeing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#entertainment_behavior -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#entertainment_behavior">
@@ -9400,7 +9388,16 @@ using words in a clever and funny way</rdfs:comment>
     <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#frequent">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <rdfs:comment xml:lang="en">consistent behavior that turned into habits</rdfs:comment>
-        <rdfs:label xml:lang="en">frequent behavior</rdfs:label>
+        <rdfs:label xml:lang="en">Habitual behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#fruitVegetableIntake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#fruitVegetableIntake">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042755"/>
+        <rdfs:label xml:lang="en">Fruit and vegetable Intake</rdfs:label>
     </owl:Class>
     
 
@@ -9433,6 +9430,15 @@ using words in a clever and funny way</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">internet use</rdfs:label>
         <rdfs:label xml:lang="ar">استخدام الانترنت</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#physicalWellbeing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#physicalWellbeing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#WellBeing"/>
+        <rdfs:label xml:lang="en">Physical Wellbeing</rdfs:label>
     </owl:Class>
     
 
@@ -9490,7 +9496,7 @@ using words in a clever and funny way</rdfs:comment>
     <owl:Class rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#singular">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <rdfs:comment xml:lang="en">behavior done once or a couple of times but not consistently</rdfs:comment>
-        <rdfs:label xml:lang="en">singular behavior</rdfs:label>
+        <rdfs:label xml:lang="en">Singular behavior</rdfs:label>
     </owl:Class>
     
 
@@ -15574,30 +15580,6 @@ untrustworthy</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#sleepQualityTask">
         <rdf:type rdf:resource="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#sleepTask"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#totalLighActivity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#totalLighActivity">
-        <rdf:type rdf:resource="https://perkapp.fbk.eu/helis/ontology/core#Activity"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#totalModerateActivity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#totalModerateActivity">
-        <rdf:type rdf:resource="https://perkapp.fbk.eu/helis/ontology/core#Activity"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#totalVigorousActivity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaelbolock/ontologies/2019/9/cc#totalVigorousActivity">
-        <rdf:type rdf:resource="https://perkapp.fbk.eu/helis/ontology/core#Activity"/>
     </owl:NamedIndividual>
     
 
